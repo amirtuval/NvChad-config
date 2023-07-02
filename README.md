@@ -1,6 +1,6 @@
 # Amir Tuval's neovim config
 
-Based on (NvChad)[https://nvchad.com/].
+Based on [NvChad](https://nvchad.com/).
 
 ## Environment setup
 
