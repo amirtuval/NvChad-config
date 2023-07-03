@@ -38,6 +38,17 @@ M.dap = {
   }
 }
 
+M.dapui = {
+  plugin = true,
+  n = {
+    ["<leader>duc"] = {
+      function()
+        require("dapui").close()
+      end
+    }
+  }
+}
+
 M.dap_python = {
   plugin = true,
   n = {
@@ -49,4 +60,17 @@ M.dap_python = {
   }
 }
 
+M.rust = {
+  plugin = true,
+  n = {
+    ["<leader>rd"] = {
+      "<cmd> RustDebuggables <CR>",
+      "Rust Debuggables",
+    },
+    ["<leader>rha"] = {
+      "<cmd> RustHoverActions <CR>",
+      "Rust Hover Actions",
+    }
+  }
+}
 return M

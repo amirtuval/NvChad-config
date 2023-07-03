@@ -29,12 +29,17 @@ local plugins = {
   {
     "simrat39/rust-tools.nvim",
     ft = "rust", 
-    dependencies = "neovim/nvim-lspconfig",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+      "neovim/nvim-lspconfig",
+    },
     opts = function()
       return require "custom.configs.rust-tools"
     end,
     config = function(_, opts)
       require('rust-tools').setup(opts)
+      require('core.utils').load_mappings("rust")
     end
   },
   {
@@ -97,7 +102,23 @@ local plugins = {
       dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
       end
+      require("core.utils").load_mappings("dapui")
     end
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    opts = {
+      ensure_installed = {
+        "rust",
+        "python",
+        "typescript",
+        "javascript",
+        "toml",
+        "c",
+        "cpp",
+        "cuda",
+      }
+    }
   },
 }
 
