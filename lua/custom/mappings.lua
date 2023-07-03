@@ -68,7 +68,7 @@ M.rust = {
       "Rust Debuggables",
     },
     ["<leader>rha"] = {
-      "<cmd> RustHoverActions <CR>",
+      "<cmd> RustHoverActions <CR> <cmd> RustHoverActions <CR>",
       "Rust Hover Actions",
     }
   }
