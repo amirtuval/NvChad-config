@@ -68,7 +68,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "python",
+    ft = {"python", "typescript", "javascript"},
     opts = function ()
       return require "custom.configs.null-ls"
     end
