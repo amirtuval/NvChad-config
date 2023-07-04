@@ -85,4 +85,21 @@ M.lspconfig = {
   }
 }
 
+M.neogit = {
+  plugin = true,
+  n = {
+    ["<leader>ng"] = {
+      function()
+        require('neogit').open()
+      end,
+      "Open Git Commit View"
+    },
+    ["<leader>cng"] = {
+      function()
+        require('neogit').close()
+      end,
+      "Close Git Commit View"
+    }
+  }
+}
 return M

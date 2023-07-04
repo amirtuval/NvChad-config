@@ -122,21 +122,31 @@ local plugins = {
     }
   },
   {
-    "pocco81/auto-save.nvim",
-    opts = function()
-      return {
-        trigger_events = {"BufLeave", "BufWinLeave", "TabLeave"}
-      } 
-    end
-  },
-  {
     "codota/tabnine-nvim",
     build = "./dl_binaries.sh",
     lazy = false,
     config = function ()
       require('tabnine').setup({})
     end
-  }
+  },
+  {
+    "sindrets/diffview.nvim",
+    lazy = false
+  },
+  {
+    'NeogitOrg/neogit', 
+    lazy = false,
+    dependencies = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('neogit').setup({
+        disable_commit_confiramtion = true,
+        integrations = {
+          diffview = true
+        }
+      })
+      require('core.utils').load_mappings('neogit')
+    end
+  },
 }
 
 return plugins
