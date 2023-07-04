@@ -16,3 +16,9 @@ Based on [NvChad](https://nvchad.com/).
 
 Follow [this instruction](https://github.com/simrat39/rust-tools.nvim/wiki/Debugging#codelldb-a-better-debugging-experience) to install and use code-lldb.
 You'll need to edit custom/configs/rust-tools.lua with the right paths.
+
+### Install ripgrep
+
+```
+sudo apt install ripgrep
+```
