@@ -9,6 +9,7 @@ local plugins = {
         "ruff",
         "black",
         "debugpy",
+        "typescript-language-server",
       },
     },
   },
@@ -119,6 +120,14 @@ local plugins = {
         "cuda",
       }
     }
+  },
+  {
+    "pocco81/auto-save.nvim",
+    opts = function()
+      return {
+        trigger_events = {"BufLeave", "BufWinLeave", "TabLeave"}
+      } 
+    end
   },
 }
 

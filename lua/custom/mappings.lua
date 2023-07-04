@@ -73,4 +73,16 @@ M.rust = {
     }
   }
 }
+
+M.lspconfig = {
+  n = {
+   ["<leader>ds"] = {
+      function() 
+        vim.lsp.buf.document_symbol()
+      end,
+      "Document Symbols"
+    } 
+  }
+}
+
 return M
