@@ -41,6 +41,11 @@ M.dap = {
 M.dapui = {
   plugin = true,
   n = {
+    ["<leader>duo"] = {
+      function()
+        require('dapui').open()
+      end
+    },
     ["<leader>duc"] = {
       function()
         require("dapui").close()
