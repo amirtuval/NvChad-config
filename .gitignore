@@ -5,3 +5,6 @@ syntax
 coc-settings.json
 .luarc.json
 lazy-lock.json
+
+.idea/
+*.iml
