@@ -198,6 +198,9 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
+      view = {
+        width = 50,
+      },
       renderer = {
         root_folder_label = true,
       }
