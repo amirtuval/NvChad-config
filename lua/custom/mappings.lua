@@ -116,4 +116,17 @@ M.symbols_outline = {
     }
   }
 }
+
+M.telescope = {
+  n = {
+    ["<leader>ts"] = {
+      "<cmd> Telescope lsp_document_symbols <CR>",
+      "Find in document symbols"
+    },
+    ["<leader>tws"] = {
+      "<cmd> Telescope lsp_workspace_symbols <CR>",
+      "Find in worlspace symbols"
+    }
+  } 
+}
 return M
