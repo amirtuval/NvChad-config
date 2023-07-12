@@ -205,6 +205,14 @@ local plugins = {
         root_folder_label = true,
       }
     }
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+      require('core.utils').load_mappings('symbols_outline')
+    end,
+    lazy = false
   }
 }
 

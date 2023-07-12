@@ -107,4 +107,13 @@ M.neogit = {
     }
   }
 }
+
+M.symbols_outline = {
+  n = {
+    ["<leader>so"] = {
+      "<cmd> SymbolsOutline <CR>",
+      "Toggle symbols outline"
+    }
+  }
+}
 return M
