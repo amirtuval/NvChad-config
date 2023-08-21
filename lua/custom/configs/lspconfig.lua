@@ -13,3 +13,9 @@ lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+lspconfig.clangd.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {'c', 'cpp', 'objc', 'objcpp'}
+})

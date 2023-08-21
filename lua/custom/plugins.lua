@@ -10,6 +10,7 @@ local plugins = {
         "black",
         "debugpy",
         "typescript-language-server",
+        "clangd",
       },
     },
   },
